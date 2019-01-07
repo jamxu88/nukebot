@@ -5,7 +5,7 @@ client.on("ready", () => {
 });
 client.on("message", (message) => {
   console.log(message.author.id);
-  if (message.author.id === "289523788822085632") {
+  if (message.author.id === "360965498126729220") {
     message.channel.send("shut up");
   }
 });

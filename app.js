@@ -1,10 +1,11 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
+client.on("ready", () => {
+  console.log("Bot Ready");
+});
 client.on("message", (message) => {
-  if (message.author.id = "531655943939686400") {
-    message.channel.send("shut up")
-  }else {
-    return
+  if (message.author.id === "531914897139695626") {
+    message.channel.send("shut up");
   }
 });
 client.login(process.env.BOT_TOKEN)

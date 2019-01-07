@@ -4,6 +4,7 @@ client.on("ready", () => {
   console.log("Bot Ready");
 });
 client.on("message", (message) => {
+  console.log(message.author.id);
   if (message.author.id === "531914897139695626") {
     message.channel.send("shut up");
   }

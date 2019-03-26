@@ -15,7 +15,7 @@ client.on("message", (message) => {
   if (message.content.startsWith("!subgap")) {
     message.channel.send("https://www.youtube.com/watch?v=UVxU2HzPGug")
   }else
-  if (message.content.includes("fuck") || message.content.includes("Fuck")) {
+  if (message.content.toLowerCase() == "fuck") {
     message.delete();
     message.channel.send("Well that's a doozy");
   }

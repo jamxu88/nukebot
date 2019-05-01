@@ -23,7 +23,7 @@ client.on("message", (message) => {
     var member = message.guild.members.random();
     message.channel.send(`${member}`);
   }else
-  if (message.content.startsWith("@idiot)) {
+  if (message.content.startsWith("@idiot")) {
     var member = message.author;
     message.channel.send(`${member}`);
   }

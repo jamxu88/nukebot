@@ -18,6 +18,9 @@ client.on("message", (message) => {
   if (message.content.toLowerCase() == "fuck") {
     message.delete();
     message.channel.send("Well that's a doozy");
-  }
+  }else
+  if (message.content.startsWith("@idiot")) {
+    var member = message.guild.members.random();
+    message.channel.send(`${member}`);
 });
 client.login(process.env.BOT_TOKEN)

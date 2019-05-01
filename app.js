@@ -22,5 +22,6 @@ client.on("message", (message) => {
   if (message.content.startsWith("@idiot")) {
     var member = message.guild.members.random();
     message.channel.send(`${member}`);
+  }
 });
 client.login(process.env.BOT_TOKEN)

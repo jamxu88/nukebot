@@ -19,8 +19,12 @@ client.on("message", (message) => {
     message.delete();
     message.channel.send("Well that's a doozy");
   }else
-  if (message.content.startsWith("@idiot")) {
+  if (message.content.startsWith("@someone")) {
     var member = message.guild.members.random();
+    message.channel.send(`${member}`);
+  }else
+  if (message.content.startsWith("@idiot)) {
+    var member = message.author;
     message.channel.send(`${member}`);
   }
 });

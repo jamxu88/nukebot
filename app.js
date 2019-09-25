@@ -22,6 +22,30 @@ client.on("message", (message) => {
   if (message.content.startsWith("@idiot")) {
     var member = message.author;
     message.channel.send(`${member}`);
+  }else
+  if (message.content.startsWith("@date")) {
+    var member = message.guild.members.random();
+    message.channel.send(`${member}`);
+  }else
+  if (message.content.startsWith("@bf")) {
+    var member = message.guild.members.random();
+    message.channel.send(`${member}`);
+  }else
+  if (message.content.startsWith("@gf")) {
+    var member = message.guild.members.random();
+    message.channel.send(`${member}`);
+  }else
+  if (message.content.startsWith("@hocopls")) {
+    var member = message.guild.members.random();
+    message.channel.send(`${member}`);
+  }else
+  if (message.content.startsWith("@coolkid")) {
+    var member = message.guild.members.random();
+    message.channel.send(`${member}`);
+  }else
+  if (message.content.startsWith("@hoco")) {
+    var member = message.guild.members.random();
+    message.channel.send(`${member}`);
   }
 });
 client.login(process.env.BOT_TOKEN)

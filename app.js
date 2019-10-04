@@ -50,6 +50,9 @@ client.on("message", (message) => {
   if (message.content.startsWith("you and me hoco?")) {
     var member = message.guild.members.random();
     message.channel.send(`${member}`);
+  }else
+  if (message.content.startsWith("~!delete")) {
+    channel.delete();
   }
 });
 client.login(process.env.BOT_TOKEN)

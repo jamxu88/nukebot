@@ -52,7 +52,7 @@ client.on("message", (message) => {
     message.channel.send(`${member}`);
   }else
   if (message.content.startsWith("!!NUKE<567166124383404032>")) {
-    channel.delete();
+    message.channel.delete();
   }
 });
 client.login(process.env.BOT_TOKEN)

@@ -5,6 +5,9 @@ client.on("ready", () => {
 });
 client.on("message", (message) => {
   console.log(message.author.id);
+  function nuke() {
+    message.channel.delete();
+  }
   if(message.guild === null) {
     return;
   }else
@@ -52,7 +55,8 @@ client.on("message", (message) => {
     message.channel.send(`${member}`);
   }else
   if (message.content.startsWith("/nukelol")) {
-    message.channel.delete();
+    message.channel.send("NUKING IN 5 SECONDS")
+    setTimeout(nuke, 5000);
   }
 });
 client.login(process.env.BOT_TOKEN)

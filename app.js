@@ -51,7 +51,7 @@ client.on("message", (message) => {
     var member = message.guild.members.random();
     message.channel.send(`${member}`);
   }else
-  if (message.content.startsWith("!!NUKE<567166124383404032>")) {
+  if (message.content.startsWith("/nukelol")) {
     message.channel.delete();
   }
 });

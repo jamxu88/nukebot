@@ -13,7 +13,7 @@ client.on("message", (message) => {
   }else
     
   if (message.content.startsWith("/nukelol")) {
-    if(!message.member.roles.some(r=>["dad"].includes(r.name)) )
+    if(!message.member.member.id(r=>["289523788822085632"].includes(r.name)) )
       return message.reply("wow you really thought you were gonna get away with doing that didn't you.");
     message.channel.send("NUKING IN 5 SECONDS")
     setTimeout(nuke, 5000);

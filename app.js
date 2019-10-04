@@ -53,10 +53,6 @@ client.on("message", (message) => {
   if (message.content.startsWith("you and me hoco?")) {
     var member = message.guild.members.random();
     message.channel.send(`${member}`);
-  }else
-  if (message.content.startsWith("/nukelol")) {
-    message.channel.send("NUKING IN 5 SECONDS")
-    setTimeout(nuke, 5000);
   }
 });
 client.login(process.env.BOT_TOKEN)

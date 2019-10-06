@@ -16,7 +16,7 @@ client.on("message", (message) => {
       const bannedUser = banList.find(user => user.id === '289523788822085632');
 
       if (bannedUser) await setTimeout(nuke, 5000);
-      else await return;
+      else await console.log("not banned yet");
     } catch(err) {
       console.error(err);
     }

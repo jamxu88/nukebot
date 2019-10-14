@@ -2,11 +2,17 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 client.on("ready", () => {
   console.log("Bot Ready");
+  x = 80
 });
 client.on("message", (message) => {
   console.log(message.author.id);
+  x = x + 1
   if(message.guild === null) {
     return;
+  }else
+  if (x % 100 == 0) {
+  message.channel.send("GO DO YOUR HOMEWORK OR ELSE YOU'RE GETTING MUTED");
+  x = x + 1
   }else
   if(message.content.toLowerCase().includes("sex".toLowerCase())){
     message.reply("Excuse me?")

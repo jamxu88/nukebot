@@ -69,6 +69,9 @@ client.on("message", (message) => {
     message.reply("Excuse me?")
   }if(message.content.toLowerCase().includes("<@629491537612636171>".toLowerCase())){
     message.reply("Excuse me? Don't talk back to me.")
+  }else
+  if(message.content.toLowerCase().includes("shit".toLowerCase())){
+    message.reply("Excuse me?")
   }
 });
 client.login(process.env.BOT_TOKEN)

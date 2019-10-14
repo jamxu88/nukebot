@@ -52,7 +52,9 @@ client.on("message", (message) => {
   }else
   if(message.content.toLowerCase().includes("cum".toLowerCase())){
     message.reply("Excuse me?")
+  }else
+  if(message.content.toLowerCase().includes("hoe".toLowerCase())){
+    message.reply("Excuse me?")
   }
-  
 });
 client.login(process.env.BOT_TOKEN)

@@ -61,6 +61,8 @@ client.on("message", (message) => {
   }else
   if(message.content.toLowerCase().includes("cunt".toLowerCase())){
     message.reply("Excuse me?")
+  }if(message.content.toLowerCase().includes("<@629491537612636171>".toLowerCase())){
+    message.reply("Excuse me? You're gonna get banned.")
   }
 });
 client.login(process.env.BOT_TOKEN)
